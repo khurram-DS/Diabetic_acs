@@ -134,11 +134,13 @@
                     {% endif %}
                 </div>
                 <div class="col-md-6">
-                    {% if my_prediction2 %}
                     <h3>No of Diabetic Case </h3>
-                   
-                    
+                    {% if my_prediction2 %}
+                    {% if my_prediction2< 0  %}
+                    <h4 class="text text-success">Number of Diabetic Cases Based on AQI <sub></sub> is None </h4>
+                    {% else %}
                     <h4 class="text text-success">Number of Diabetic Cases Based on AQI <sub></sub> is {{ my_prediction2 }} </h4>
+                    {% endif %}
                     {% endif %}
                 </div>
                 <div class="col-md-6">
